@@ -4,6 +4,7 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
+    "noImplicitAny": false,
     "lib": [
       "dom",
       "esnext"
