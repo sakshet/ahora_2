@@ -1,0 +1,19 @@
+{
+  "name": "ahora",
+  "version": "1.0.0",
+  "description": "Ahora",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakshet/ahora.git"
+  },
+  "author": "Sakshet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakshet/ahora/issues"
+  },
+  "homepage": "https://github.com/sakshet/ahora#readme"
+}
