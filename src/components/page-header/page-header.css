@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  user-select: none;
   width: 100%;
 }
 
