@@ -5,7 +5,7 @@ import { Tab } from '../tab';
 import * as styles from './page-header.css';
 
 export class PageHeader extends React.Component {
-  
+
   private onBrandClick = (): void => {
     window.location.assign(BASE_URL);
   }

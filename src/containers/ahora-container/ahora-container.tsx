@@ -86,7 +86,6 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
       </div>
     );
   }
-
   render() {
     const { referenceDataFetched, referenceDataSuccess } = this.state;
     return (
@@ -95,7 +94,6 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
           <div>{this.fetchRoutes()}</div>
         ) : <div>Loading</div>}
       </Provider>
-      
     );
   }
 }
