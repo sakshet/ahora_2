@@ -1,21 +1,23 @@
+@font-face {
+  font-family: ostritch-regular;
+  src: URL('../../utils/fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
+}
+
 .header {
-  border: solid;
+  background-color: black;
   display: flex;
   justify-content: space-between;
 }
 
 .label {
-  font-size: 2rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding: 0.1rem;
+  color: white;
+  cursor: pointer;
+  font-size: xx-large;
+  font-family: ostritch-regular;
 }
 
 .tabs {
   display: flex;
-  padding: 0.1rem;
-}
-
-.tab {
-  font-size: 1.5rem;
-  width: 5rem;
+  justify-content: space-around;
+  width: 30%;
 }
