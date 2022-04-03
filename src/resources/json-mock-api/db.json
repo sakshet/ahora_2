@@ -1,8 +1,11 @@
 {
   "reference-data": {
-    "userId": 1,
-    "firstName": "Sakshet",
-    "lastName": "",
-    "memberSince": "2022-04-03"
+    "isLoggedIn": false,
+    "memberInfo": {
+      "userId": 1,
+      "firstName": "Sakshet",
+      "lastName": "",
+      "memberSince": "2022-04-03"
+    }
   }
 }

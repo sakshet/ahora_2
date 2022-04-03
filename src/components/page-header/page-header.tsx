@@ -1,33 +1,32 @@
 import * as React from 'react';
-import { ABOUT_LABEL, BASE_URL, PAGES } from '../../shared';
+import { useNavigate } from 'react-router-dom';
+import { ABOUT_LABEL, APP_NAME, BASE_URL, PAGES } from '../../shared';
 import RefDataContext from '../../utils/context-utils';
 import { Tab } from '../tab';
 import * as styles from './page-header.css';
 
-export class PageHeader extends React.Component {
-  
-  private onBrandClick = (): void => {
-    window.location.assign(BASE_URL);
-  }
+export function getLabel (context): string {
+  const { isLoggedIn, memberInfo } = context;
+  return isLoggedIn ? `Welcome ${memberInfo.firstName}` : 'Log In / Sign Up';
+}
 
-  render() {
-    return (
-      <div className={styles.header}>
-        <RefDataContext.Consumer>
-          {(context) => (
-            <div className={styles.header}>
-              <a className={styles.label} onClick={this.onBrandClick}>AHORA</a>
-              <div className={styles.tabs}>
-                <Tab label={ABOUT_LABEL} page={PAGES.ABOUT_US} />
-                <Tab
-                  label={`Welcome, ${context.referenceData.firstName}`}
-                  page={PAGES.LOGIN}
-                />
-              </div>
+export function PageHeader (props: {}) {
+  const navigate = useNavigate();
+  const onClick = (() => navigate(BASE_URL));
+
+  return (
+    <div className={styles.header}>
+      <RefDataContext.Consumer>
+        {(context) => (
+          <div className={styles.header}>
+            <a className={styles.label} onClick={onClick}>{APP_NAME}</a>
+            <div className={styles.tabs}>
+              <Tab label={ABOUT_LABEL} page={PAGES.ABOUT_US} />
+              <Tab label={getLabel(context)} page={PAGES.LOGIN} />
             </div>
-          )}
-        </RefDataContext.Consumer>
-      </div>
-    );
-  }
+          </div>
+        )}
+      </RefDataContext.Consumer>
+    </div>
+  );
 }
