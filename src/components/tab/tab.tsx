@@ -1,4 +1,5 @@
 import * as React from 'react';
+import RefDataContext from '../../utils/context-utils';
 import * as styles from './tab.css';
 
 export interface TabProps {
@@ -16,9 +17,13 @@ export class Tab extends React.Component<TabProps> {
   render() {
     const { label } = this.props;
     return (
-      <a className={styles.tab} onClick={this.onClick}>
-        {label}
-      </a>
+      <RefDataContext.Consumer>
+        {(context) => (
+          <div className={styles.tab} onClick={this.onClick}>
+            {label}, {context.referenceData.firstName}
+          </div>
+        )}
+      </RefDataContext.Consumer>
     );
   }
 }
