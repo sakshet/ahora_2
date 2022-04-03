@@ -1,6 +1,6 @@
 @font-face {
   font-family: ostrich-regular;
-  src: URL('../../utils/fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
+  src: URL('../../shared/fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
 }
 
 .tab {

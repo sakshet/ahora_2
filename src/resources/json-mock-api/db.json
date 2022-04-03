@@ -1,8 +1,8 @@
 {
   "reference-data": {
-    "user_id": 1,
-    "first_name": "Sakshet",
-    "last_name": "",
-    "member_since": "2022-04-03"
+    "userId": 1,
+    "firstName": "Sakshet",
+    "lastName": "",
+    "memberSince": "2022-04-03"
   }
 }

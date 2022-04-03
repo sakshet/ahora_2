@@ -1,12 +1,13 @@
 @font-face {
   font-family: ostritch-regular;
-  src: URL('../../utils/fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
+  src: URL('../../shared/fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
 }
 
 .header {
   background-color: black;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .label {

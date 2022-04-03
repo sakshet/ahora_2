@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as styles from './tab.css';
 
 export interface TabProps {
-  id: string;
+  label: string;
   page: string;
 }
 
@@ -14,10 +14,10 @@ export class Tab extends React.Component<TabProps> {
   }
 
   render() {
-    const { id } = this.props;
+    const { label } = this.props;
     return (
       <a className={styles.tab} onClick={this.onClick}>
-        {id}
+        {label}
       </a>
     );
   }

@@ -3,6 +3,6 @@ import * as styles from './about-us-renderer.css';
 
 export const AboutUsRenderer = (props: {}) => {
   return (
-    <div className={styles.about}>Sakshet</div>
+    <div className={styles.about}>It's me, Sakshet! Your developer</div>
   );
 }

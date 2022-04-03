@@ -7,12 +7,13 @@ import createSagaMiddleware from 'redux-saga';
 import { all } from 'redux-saga/effects';
 import { AboutUsRenderer, PageHeader } from '../../components';
 import { ContentContainer, LoginContainer } from '../../containers';
-import { BASE_ROUTE, PAGES } from '../../utils';
-import { commonReducer as common } from '../common';
+import { BASE_ROUTE, PAGES } from '../../shared';
+import { commonReducer as common, IReferenceData } from '../common';
 import { contentReducer as content, contentSagas } from '../content-container';
 import { getReferenceData } from '../common/common-actions';
 import { commonSagas } from '../common/common-sagas';
 import * as styles from './ahora-container.css';
+import RefDataContext from '../../utils/context-utils';
 
 function* rootSaga() {
   yield all([
@@ -27,6 +28,7 @@ export interface IAhoraContainerProps {
 }
 
 export interface IAhoraContainerState {
+  referenceData: IReferenceData | undefined;
   referenceDataFetched: boolean;
   referenceDataSuccess: boolean;
 }
@@ -36,6 +38,7 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
   private middleware = [logger, sagaMiddleWare];
 
   state: IAhoraContainerState = {
+    referenceData: undefined,
     referenceDataFetched: false,
     referenceDataSuccess: false
   };
@@ -57,25 +60,29 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
 
   private handleStateChange(): void {
     const { common } = this.store.getState();
-    const { referenceDataFetched, referenceDataSuccess } = common;
+    const { referenceData, referenceDataFetched, referenceDataSuccess } = common;
     this.setState({
+      referenceData,
       referenceDataFetched,
       referenceDataSuccess
     });
   }
 
   private fetchRoutes() {
-    return (
+    const { referenceData } = this.state;
+    return ( 
       <div className={styles.container}>
-        <PageHeader />
-        <BrowserRouter>
-          <Routes>
-            <Route path={BASE_ROUTE} element={<ContentContainer />} />
-            <Route path={PAGES.ABOUT_US} element={<AboutUsRenderer />} />
-            <Route path={PAGES.LOGIN} element={<LoginContainer />} />
-            <Route path='*' element={<Navigate to={BASE_ROUTE} replace />} />
-          </Routes>
-        </BrowserRouter>
+        {referenceData && <RefDataContext.Provider value={{ referenceData }}>
+          <PageHeader />
+          <BrowserRouter>
+            <Routes>
+              <Route path={BASE_ROUTE} element={<ContentContainer />} />
+              <Route path={PAGES.ABOUT_US} element={<AboutUsRenderer />} />
+              <Route path={PAGES.LOGIN} element={<LoginContainer />} />
+              <Route path='*' element={<Navigate to={BASE_ROUTE} replace />} />
+            </Routes>
+          </BrowserRouter>
+        </RefDataContext.Provider>}
       </div>
     );
   }
@@ -86,7 +93,7 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
       <Provider store={this.store}>
         {referenceDataFetched && referenceDataSuccess ? (
           <div>{this.fetchRoutes()}</div>
-        ) : undefined}
+        ) : <div>Loading</div>}
       </Provider>
       
     );
