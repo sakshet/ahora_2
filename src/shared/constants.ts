@@ -1,4 +1,4 @@
-export const APP_NAME: string = 'AHORA';
+export const APP_NAME: string = 'Ahora';
 
 export const BASE_ROUTE: string = '';
 export const BASE_URL: string = 'http://localhost:3000';

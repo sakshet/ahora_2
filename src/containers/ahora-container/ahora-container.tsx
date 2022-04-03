@@ -6,10 +6,10 @@ import createSagaMiddleware from 'redux-saga';
 import { all } from 'redux-saga/effects';
 import { AboutUsRenderer, PageHeader } from '../../components';
 import { ContentContainer, LoginContainer } from '../../containers';
+import { defaultState } from '../../containers/common';
 import { BASE_ROUTE, PAGES } from '../../shared';
 import RefDataContext from '../../utils/context-utils';
-import { commonReducer as common, IReferenceData } from '../common';
-import { getReferenceData } from '../common/common-actions';
+import { commonReducer as common, getReferenceData, IReferenceData } from '../common';
 import { commonSagas } from '../common/common-sagas';
 import * as styles from './ahora-container.css';
 
@@ -32,15 +32,19 @@ export interface IAhoraContainerProps {
 }
 
 export interface IAhoraContainerState {
-  referenceData: IReferenceData | undefined;
+  referenceData: IReferenceData;
   referenceDataFetched: boolean;
   referenceDataSuccess: boolean;
+}
+
+export interface IContext {
+  referenceData: IReferenceData;
 }
 
 export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhoraContainerState> {
   
   state: IAhoraContainerState = {
-    referenceData: undefined,
+    referenceData: defaultState.referenceData,
     referenceDataFetched: false,
     referenceDataSuccess: false
   };
@@ -70,13 +74,15 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
     return ( 
       <div className={styles.container}>
         {referenceData && <RefDataContext.Provider value={{ referenceData }}>
-            <PageHeader />
+          <PageHeader />
+          <div className={styles.content}>
             <Routes>
               <Route path={BASE_ROUTE} element={<ContentContainer />} />
               <Route path={PAGES.ABOUT_US} element={<AboutUsRenderer />} />
               <Route path={PAGES.LOGIN} element={<LoginContainer />} />
               <Route path='*' element={<Navigate to={BASE_ROUTE} replace />} />
             </Routes>
+          </div>
         </RefDataContext.Provider>}
       </div>
     );
@@ -90,7 +96,6 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
           <div>{this.fetchRoutes()}</div>
         ) : <div>Loading</div>}
       </Provider>
-      
     );
   }
 }

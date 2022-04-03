@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IContext } from '../../containers/ahora-container';
 import { ABOUT_LABEL, APP_NAME, BASE_URL, PAGES } from '../../shared';
 import RefDataContext from '../../utils/context-utils';
 import { Tab } from '../tab';
 import * as styles from './page-header.css';
 
-export function getLabel (context): string {
-  const { isLoggedIn, memberInfo } = context;
-  return isLoggedIn ? `Welcome ${memberInfo.firstName}` : 'Log In / Sign Up';
+export function getLabel (context: IContext): string {
+  const { isLoggedIn, memberInfo } = context.referenceData;
+  return isLoggedIn ? `Welcome, ${memberInfo.firstName}` : 'Log In / Sign Up';
 }
 
 export function PageHeader (props: {}) {
@@ -17,9 +18,9 @@ export function PageHeader (props: {}) {
   return (
     <div className={styles.header}>
       <RefDataContext.Consumer>
-        {(context) => (
+        {(context: IContext) => (
           <div className={styles.header}>
-            <a className={styles.label} onClick={onClick}>{APP_NAME}</a>
+            <div className={styles.label} onClick={onClick}>{APP_NAME}</div>
             <div className={styles.tabs}>
               <Tab label={ABOUT_LABEL} page={PAGES.ABOUT_US} />
               <Tab label={getLabel(context)} page={PAGES.LOGIN} />

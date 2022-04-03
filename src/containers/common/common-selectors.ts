@@ -2,11 +2,9 @@ import { createStructuredSelector } from 'reselect';
 import { createCommonSelector, createReferenceDataSelector } from '../../utils';
 
 export const referenceDataSelector = createStructuredSelector({
-  firstName: createReferenceDataSelector('firstName'),
   isLoggedIn: createReferenceDataSelector('isLoggedIn'),
-  lastName: createReferenceDataSelector('lastName'),
-  memberSince: createReferenceDataSelector('memberSince'),
-  userId: createReferenceDataSelector('userId')
+  locations: createReferenceDataSelector('locations'),
+  memberInfo: createReferenceDataSelector('memberInfo')
 });
 
 export const commonSelector = createStructuredSelector({

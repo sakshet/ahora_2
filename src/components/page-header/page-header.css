@@ -1,12 +1,10 @@
 .header {
-  background-color: black;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .label {
-  color: white;
   cursor: pointer;
   font-size: 2.5rem;
   font-family: 'Trebuchet MS', sans-serif;
