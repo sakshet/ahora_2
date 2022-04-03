@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
+    "mock:start": "json-server --watch db.json",
     "start": "webpack serve --port 3000",
     "test": "npm run test:run",
     "test:run": "jest --silent"
@@ -43,7 +44,10 @@
   },
   "dependencies": {
     "g": "^2.0.1",
+    "history": "^5.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
   }
 }

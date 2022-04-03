@@ -1,17 +1,22 @@
 import * as React from 'react';
+import { BASE_URL, PAGES } from '../../utils';
+import { Tab } from '../tab';
 import * as styles from './page-header.css';
 
 export class PageHeader extends React.Component {
+
+  private onBrandClick = (): void => {
+    window.location.assign(BASE_URL);
+  }
+
   render() {
     // TODO - Support pageHeader as a supported CSS label
     return (
       <div className={styles.header}>
-        <div className={styles.label}>AHORA</div>
+        <a className={styles.label} onClick={this.onBrandClick}>AHORA</a>
         <div className={styles.tabs}>
-          <a className={styles.tab}>About us</a>
-          <a className={styles.tab}>Tab 2</a>
-          <a className={styles.tab}>Tab 3</a>
-          <a className={styles.tab}>Log In / Sign Up</a>
+          <Tab id={"About us"} page={PAGES.ABOUT_US} />
+          <Tab id={"Log In / Sign Up"} page={PAGES.LOGIN} />
         </div>
       </div>
     );
