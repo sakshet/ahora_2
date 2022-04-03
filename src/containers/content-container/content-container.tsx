@@ -8,10 +8,16 @@ export class ContentContainer extends React.Component {
     return (
       <RefDataContext.Consumer>
           {(context) => (
-            <div className={styles.content}>
-              Welcome, {context.referenceData.firstName}<br/>
-              We're glad you trusted us on {context.referenceData.memberSince}
-            </div>
+            context.referenceData.isLoggedIn ? (
+              <div className={styles.content}>
+                Welcome, {context.referenceData.firstName}<br/>
+                We're glad you trusted us on {context.referenceData.memberSince}
+              </div>
+            ) : (
+              <div className={styles.content}>
+                Please log in to see more information
+              </div>
+            )
           )}
         </RefDataContext.Consumer>
     );

@@ -1,11 +1,11 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import { getReferenceData } from '../../services';
 import { ActionType, ICommonAction } from "./common-actions";
-import { IReferenceData } from "./common-reducers";
+import { IReferenceDataFetch } from "./common-reducers";
 
 export function* getReferenceDataSaga(action: ICommonAction) {
   try {
-    const referenceData: IReferenceData = yield call(getReferenceData);
+    const referenceData: IReferenceDataFetch = yield call(getReferenceData);
     yield put({
       referenceData,
       type: ActionType.RECV_GET_REFERENCE_DATA
@@ -16,5 +16,5 @@ export function* getReferenceDataSaga(action: ICommonAction) {
 }
 
 export function* commonSagas(): any {
-  yield takeLatest(ActionType.REQ_GET_REFERENCE_DATA, getReferenceDataSaga);
+  yield takeEvery(ActionType.REQ_GET_REFERENCE_DATA, getReferenceDataSaga);
 }

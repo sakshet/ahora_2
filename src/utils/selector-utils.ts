@@ -1,5 +1,5 @@
 import get from 'lodash-es/get';
-import { ICommonState, IReferenceData } from "../containers/common";
+import { ICommonState, IMemberInfo, IReferenceData } from "../containers/common";
 import { IApplicationState } from '../shared';
 
 export function createCommonSelector<P extends keyof ICommonState>(property: P) {
