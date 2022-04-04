@@ -8,35 +8,59 @@
       "userId": 1,
       "userName": "sakshet"
     },
-    "locations": [
-      {
-        "city": "London",
-        "country": "United Kingdom"
+    "locations": {
+      "United Kingdom": {
+        "totalResults": 3,
+        "cities": {
+          "London": {
+            "services": [
+              "Cleaning",
+              "Hair Cut - Men"
+            ]
+          },
+          "Manchester": {
+            "services": [
+              "Hair Cut - Women",
+              "Hair Cut - Men"
+            ]
+          },
+          "Liverpool": {
+            "services": [
+              "Plumber",
+              "Hair Cut - Men"
+            ]
+          }
+        }
       },
-      {
-        "city": "Manchester",
-        "country": "United Kingdom"
+      "France": {
+        "totalResults": 1,
+        "cities": {
+          "Paris": {
+            "services": [
+              "Electrician",
+              "Carpenter"
+            ]
+          }
+        }
       },
-      {
-        "city": "Birmingham",
-        "country": "United Kingdom"
-      },
-      {
-        "city": "Paris",
-        "country": "France"
-      },
-      {
-        "city": "Berlin",
-        "country": "Germany"
+      "Germany": {
+        "totalResults": 1,
+        "cities": {
+          "Berlin": {
+            "services": [
+              "Plumber",
+              "Locksmith"
+            ]
+          }
+        }
       }
-    ]
+    }
   },
   "locations": {
     "totalResults": 5,
     "results": [
       {
         "city": "London",
-        "country": "United Kingdom",
         "services": [
           "Cleaning",
           "Hair Cut - Men"
@@ -44,7 +68,6 @@
       },
       {
         "city": "Manchester",
-        "country": "United Kingdom",
         "services": [
           "Hair Cut - Women",
           "Hair Cut - Men"
@@ -52,7 +75,6 @@
       },
       {
         "city": "Liverpool",
-        "country": "United Kingdom",
         "services": [
           "Plumber",
           "Hair Cut - Men"

@@ -6,7 +6,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { all } from 'redux-saga/effects';
-import { AboutUsRenderer, PageHeader } from '../../components';
+import { AboutUsRenderer, PageHeader, Footer } from '../../components';
 import { ContentContainer, LoginContainer } from '../../containers';
 import { defaultState } from '../../containers/common';
 import { BASE_ROUTE, PAGES } from '../../shared';
@@ -85,6 +85,7 @@ export class AhoraContainer extends React.Component<IAhoraContainerProps, IAhora
               <Route path='*' element={<Navigate to={BASE_ROUTE} replace />} />
             </Routes>
           </div>
+          <Footer />
         </RefDataContext.Provider>}
       </div>
     );
