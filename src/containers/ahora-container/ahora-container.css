@@ -10,6 +10,7 @@ html {
   flex-direction: column;
   flex-wrap: wrap;
   height: 100%;
+  user-select: none;
   width: 100%;
 }
 

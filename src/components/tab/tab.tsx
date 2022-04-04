@@ -9,19 +9,9 @@ export interface TabProps {
   page: string;
 }
 
-const orientation = 'to right';
-const color1 = '#587264';
-const color2 = '#89bca5';
-
 export function Tab (props: {label: string, page: string}) {
   const navigate = useNavigate();
-  // const onTabChange = (() => navigate(props.page));
-  const onTabChange = (() => {
-    navigate(props.page);
-    if(props.page === PAGES.ABOUT_US) {
-      document.body.style.backgroundColor = `linear-gradient(to right, ${color1} 0%, ${color2} 100%))`;
-    }
-  });
+  const onTabChange = (() => navigate(props.page));
   
   return (
     <div className={styles.tab}>
