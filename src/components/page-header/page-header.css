@@ -3,12 +3,13 @@
   height: 5%;
   justify-content: space-between;
   width: 100%;
-  -webkit-box-shadow: 0 8px 6px -6px black;
-	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
+  -webkit-box-shadow: 0 8px 6px -6px #717271;
+	-moz-box-shadow: 0 8px 6px -6px #717271;
+	box-shadow: 0 8px 6px -6px #717271;
 }
 
 .label {
+  color: #bcc1bc;
   cursor: pointer;
   font-size: 2.5rem;
   font-family: 'Trebuchet MS', sans-serif;

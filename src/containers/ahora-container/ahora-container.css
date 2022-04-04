@@ -1,6 +1,12 @@
 html {
+  /* background: linear-gradient(
+    to right,  rgb(45, 45, 45) 0%, rgb(45, 45, 45) 30%,rgb(199, 196, 196) 30%,rgb(199, 196, 196) 100%
+  ); */
+  /* background: linear-gradient(
+    to right,  #343534 0%,#343534 30%,#d9ddda 30%,#d9ddda 100%
+  ); */
   background: linear-gradient(
-    to right,  #36463d 0%,#587264 30%,#648f7b 30%,#89bca5 100%
+    to right,  #000000 0%,#000000 30%,#ffffff 30%,#ffffff 100%
   );
 }
 
@@ -19,4 +25,5 @@ html {
   position: absolute;
   width: 100%;
   top: 5%;
+  margin-top: 1rem;
 }

@@ -20,7 +20,7 @@ export function PageHeader (props: {}) {
       <RefDataContext.Consumer>
         {(context: IContext) => (
           <div className={styles.header}>
-            <div className={styles.label} onClick={onClick}>{APP_NAME.toUpperCase()}</div>
+            <div className={styles.label} onClick={onClick}>》{APP_NAME.toUpperCase()}《</div>
             <div className={styles.tabs}>
               <Tab label={ABOUT_LABEL} page={PAGES.ABOUT_US} />
               <Tab label={getLabel(context)} page={PAGES.LOGIN} />
