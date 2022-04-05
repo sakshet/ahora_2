@@ -1,12 +1,8 @@
+@import '../../shared/constants.css';
+
 html {
-  /* background: linear-gradient(
-    to right,  rgb(45, 45, 45) 0%, rgb(45, 45, 45) 30%,rgb(199, 196, 196) 30%,rgb(199, 196, 196) 100%
-  ); */
-  /* background: linear-gradient(
-    to right,  #343534 0%,#343534 30%,#d9ddda 30%,#d9ddda 100%
-  ); */
   background: linear-gradient(
-    to right,  #000000 0%,#000000 30%,#ffffff 30%,#ffffff 100%
+    to right,  var(--producerBg) 0%, var(--producerBg) 30%, var(--consumerBg) 30%, var(--consumerBg) 100%
   );
 }
 

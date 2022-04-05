@@ -1,5 +1,7 @@
+@import "../../shared/constants.css";
 .tab {
   align-self: center;
+  color: var(--tabColor);
   cursor: pointer;
   font-size: 1rem;
   font-family: Tahoma, sans-serif;

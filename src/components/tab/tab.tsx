@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PAGES } from '../../shared';
+import { COLOR, CONTENT } from '../../shared';
+import { setColors } from '../../utils';
 import RefDataContext from '../../utils/context-utils';
 import * as styles from './tab.css';
 
@@ -11,8 +12,11 @@ export interface TabProps {
 
 export function Tab (props: {label: string, page: string}) {
   const navigate = useNavigate();
-  const onTabChange = (() => navigate(props.page));
-  
+  const onTabChange = (() => {
+    navigate(props.page);
+    setColors(CONTENT.CONSUMER);
+  });
+   
   return (
     <div className={styles.tab}>
       <RefDataContext.Consumer>

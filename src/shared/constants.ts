@@ -1,3 +1,5 @@
+import { dark, light } from './colors';
+
 export const APP_NAME: string = 'Ahora';
 
 export const BASE_ROUTE: string = '';
@@ -12,4 +14,31 @@ export const PAGES = {
   ABOUT_US: `${BASE_ROUTE}/${ABOUT_PAGE}`,
   ANOTHER_TAB: `${BASE_ROUTE}/another-tab`,
   LOGIN: `${BASE_ROUTE}/${LOGIN_PAGE}`
+}
+
+export enum CONTENT {
+  CONSUMER = 'consumer',
+  MAIN = 'main',
+  PRODUCER = 'producer'
+}
+
+export const COLOR = {
+  [CONTENT.CONSUMER]: {
+    labelColor: dark,
+    consumerBg: light,
+    producerBg: light,
+    tabColor: dark
+  },
+  [CONTENT.MAIN]: {
+    labelColor: light,
+    consumerBg: light,
+    producerBg: dark,
+    tabColor: dark
+  },
+  [CONTENT.PRODUCER]: {
+    labelColor: light,
+    consumerBg: dark,
+    producerBg: dark,
+    tabColor: light
+  }
 }
