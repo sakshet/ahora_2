@@ -2,6 +2,7 @@
   align-items: center;
   color: var(--tabColor);
   display: flex;
+  font-family: Tahoma, sans-serif;
   justify-content: center;
   width: 70%;
 }
