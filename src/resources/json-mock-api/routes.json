@@ -1,3 +1,7 @@
 {
-  "/v1/reference-data": "/v1/reference-data"
+  "/reference-data": "/reference-data",
+  "/locations?country=UK": "/locationsUK",
+  "/locations?country=France": "/locationsFrance",
+  "/locations?country=Germany": "/locationsGermany",
+  "/locations": "/locations"
 }

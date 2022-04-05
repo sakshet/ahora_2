@@ -5,22 +5,24 @@ export const defaultState: ICommonState = {
   error: undefined,
   isFetching: false,
   referenceData: {
-    firstName: '',
     isLoggedIn: false,
-    lastName: '',
-    memberSince: '',
-    userId: 0
+    locations: [],
+    memberInfo: {
+      firstName: '',
+      lastName: '',
+      memberSince: '',
+      userId: 0,
+      userName: ''
+    }
   },
   referenceDataFetched: false,
   referenceDataSuccess: false
 };
 
 export interface IReferenceData {
-  firstName: string;
   isLoggedIn: boolean;
-  lastName: string;
-  memberSince: string;
-  userId: number;
+  locations: ILocation[];
+  memberInfo: IMemberInfo;
 };
 
 export interface IMemberInfo {
@@ -28,11 +30,12 @@ export interface IMemberInfo {
   lastName: string;
   memberSince: string;
   userId: number;
+  userName: string;
 }
 
-export interface IReferenceDataFetch {
-  isLoggedIn: boolean;
-  memberInfo: IMemberInfo;
+export interface ILocation {
+  city: string;
+  country: string;
 }
 
 export interface ICommonState {
@@ -56,10 +59,7 @@ export const commonReducer: Reducer<ICommonState, ICommonAction> = (
       return {
         ...state,
         isFetching: false,
-        referenceData: {
-          isLoggedIn: action.referenceData.isLoggedIn,
-          ...action.referenceData.memberInfo
-        },
+        referenceData: action.referenceData,
         referenceDataFetched: true,
         referenceDataSuccess: true
       };

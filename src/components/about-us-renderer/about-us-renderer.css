@@ -1,10 +1,8 @@
 .about {
-  align-items: center;
-  border: solid;
-  color: white;
+  align-content: center;
   display: flex;
-  height: 65rem;
-  font-family: Tahoma, sans-serif;
-  font-size: 3rem;
-  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }

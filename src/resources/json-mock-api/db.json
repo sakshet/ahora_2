@@ -1,11 +1,156 @@
 {
   "reference-data": {
-    "isLoggedIn": false,
+    "isLoggedIn": true,
     "memberInfo": {
-      "userId": 1,
       "firstName": "Sakshet",
       "lastName": "",
-      "memberSince": "2022-04-03"
+      "memberSince": "2022-04-03",
+      "userId": 1,
+      "userName": "sakshet"
+    },
+    "locations": {
+      "United Kingdom": {
+        "totalResults": 3,
+        "cities": {
+          "London": {
+            "services": [
+              "Cleaning",
+              "Hair Cut - Men"
+            ]
+          },
+          "Manchester": {
+            "services": [
+              "Hair Cut - Women",
+              "Hair Cut - Men"
+            ]
+          },
+          "Liverpool": {
+            "services": [
+              "Plumber",
+              "Hair Cut - Men"
+            ]
+          }
+        }
+      },
+      "France": {
+        "totalResults": 1,
+        "cities": {
+          "Paris": {
+            "services": [
+              "Electrician",
+              "Carpenter"
+            ]
+          }
+        }
+      },
+      "Germany": {
+        "totalResults": 1,
+        "cities": {
+          "Berlin": {
+            "services": [
+              "Plumber",
+              "Locksmith"
+            ]
+          }
+        }
+      }
     }
+  },
+  "locations": {
+    "totalResults": 5,
+    "results": [
+      {
+        "city": "London",
+        "services": [
+          "Cleaning",
+          "Hair Cut - Men"
+        ]
+      },
+      {
+        "city": "Manchester",
+        "services": [
+          "Hair Cut - Women",
+          "Hair Cut - Men"
+        ]
+      },
+      {
+        "city": "Liverpool",
+        "services": [
+          "Plumber",
+          "Hair Cut - Men"
+        ]
+      },
+      {
+        "city": "Paris",
+        "country": "France",
+        "services": [
+          "Electrician",
+          "Carpenter"
+        ]
+      },
+      {
+        "city": "Berlin",
+        "country": "Germany",
+        "services": [
+          "Plumber",
+          "Locksmith"
+        ]
+      }
+    ]
+  },
+  "locationsUK": {
+    "totalResults": 3,
+    "results": [
+      {
+        "city": "London",
+        "country": "United Kingdom",
+        "services": [
+          "Cleaning",
+          "Hair Cut - Men"
+        ]
+      },
+      {
+        "city": "Manchester",
+        "country": "United Kingdom",
+        "services": [
+          "Hair Cut - Women",
+          "Hair Cut - Men"
+        ]
+      },
+      {
+        "city": "Liverpool",
+        "country": "United Kingdom",
+        "services": [
+          "Plumber",
+          "Hair Cut - Men"
+        ]
+      }
+    ]
+  },
+  "locationsFrance": {
+    "totalResults": 1,
+    "results": [
+      {
+        "city": "Paris",
+        "country": "France",
+        "services": [
+          "Electrician",
+          "Carpenter"
+        ]
+      }
+    ]
+  },
+  "locationsGermany": {
+    "totalResults": 1,
+    "results": [
+      {
+        "city": "Berlin",
+        "country": "Germany",
+        "services": [
+          "Plumber",
+          "Locksmith"
+        ]
+      }
+    ]
   }
 }

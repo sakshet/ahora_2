@@ -1,19 +1,49 @@
+@import '../../shared/constants.css';
+
 .header {
-  background-color: black;
   display: flex;
+  height: 5%;
   justify-content: space-between;
+  width: 100%;
+  -webkit-box-shadow: 0 8px 6px -6px #717271;
+	-moz-box-shadow: 0 8px 6px -6px #717271;
+	box-shadow: 0 8px 6px -6px #717271;
+}
+
+.label {
+  color: var(--labelColor);
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  width: 30%;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  width: 70%;
+}
+
+/* .header {
+  display: flex;
+  height: 5%;
+  justify-content: space-between;
+  user-select: none;
   width: 100%;
 }
 
 .label {
-  color: white;
   cursor: pointer;
   font-size: 2.5rem;
   font-family: 'Trebuchet MS', sans-serif;
+  padding: 0.5rem;
 }
 
 .tabs {
   display: flex;
   justify-content: space-around;
+  padding: 0;
   width: 25%;
-}
+} */

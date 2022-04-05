@@ -1,4 +1,4 @@
-import { IReferenceDataFetch } from "./common-reducers";
+import { IReferenceData } from "./common-reducers";
 
 export enum ActionType {
   REQ_GET_REFERENCE_DATA = `REQ_GET_REFERENCE_DATA`,
@@ -16,7 +16,7 @@ export interface GetReferenceDataAction {
 }
 
 export interface GetReferenceDataSuccessAction {
-  referenceData: IReferenceDataFetch;
+  referenceData: IReferenceData;
   type: ActionType.RECV_GET_REFERENCE_DATA;
 }
 
@@ -29,7 +29,7 @@ export const getReferenceData = (): GetReferenceDataAction => ({
   type: ActionType.REQ_GET_REFERENCE_DATA
 });
 
-export const getReferenceDataSuccess = (referenceData: IReferenceDataFetch): GetReferenceDataSuccessAction => ({
+export const getReferenceDataSuccess = (referenceData: IReferenceData): GetReferenceDataSuccessAction => ({
   referenceData,
   type: ActionType.RECV_GET_REFERENCE_DATA
 }); 

@@ -1,5 +1,25 @@
+@import '../../shared/constants.css';
+
+html {
+  background: linear-gradient(
+    to right,  var(--producerBg) 0%, var(--producerBg) 30%, var(--consumerBg) 30%, var(--consumerBg) 100%
+  );
+}
+
 .container {
-  background-color: black;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   height: 100%;
+  user-select: none;
   width: 100%;
+}
+
+.content {
+  height: 85%;
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  margin-top: 1rem;
 }
