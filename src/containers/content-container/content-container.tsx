@@ -17,15 +17,6 @@ export class ContentContainer extends React.Component {
                 As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. As a customer, we provide you many services. To get a better idea, please click abcd. 
               </div>
             </div>
-            // <div className={styles.content}>
-            //   <div className={styles.left}>location<br/>abc<br/><br/>abc</div>
-            //   <div className={styles.right}>
-            //     <div className={styles.message}>
-            //       Everything you need
-            //       <div className={styles.ahora}>{APP_NAME}</div>
-            //     </div>
-            //   </div>
-            // </div>
           )}
         </RefDataContext.Consumer>
     );
