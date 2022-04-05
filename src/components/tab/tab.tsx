@@ -16,16 +16,13 @@ export function Tab (props: {label: string, page: string}) {
     navigate(props.page);
     setColors(CONTENT.CONSUMER);
   });
-   
   return (
-    <div className={styles.tab}>
-      <RefDataContext.Consumer>
-        {(context) => (
-          <div className={styles.tab} onClick={onTabChange}>
-            {props.label}
-          </div>
-        )}
-      </RefDataContext.Consumer>
-    </div>
+    <RefDataContext.Consumer>
+      {(context) => (
+        <div className={styles.tab} onClick={onTabChange}>
+          <div className={styles.label}>{props.label}</div>
+        </div>
+      )}
+    </RefDataContext.Consumer>
   );
 }

@@ -1,7 +1,7 @@
 :root {
-  --labelColor: #dcdfc7;
-  --consumerBg: #dcdfc7;
+  --labelColor: #FFFFFF;
+  --consumerBg: #FFFFFF;
 
-  --producerBg: #343333;
-  --tabColor: #343333;
+  --producerBg: #000000;
+  --tabColor: #000000;
 }

@@ -1,4 +1,4 @@
-import { dark, light } from './colors';
+import { bgDark, bgLight, fontDark, fontLight } from './colors';
 
 export const APP_NAME: string = 'Ahora';
 
@@ -24,21 +24,21 @@ export enum CONTENT {
 
 export const COLOR = {
   [CONTENT.CONSUMER]: {
-    labelColor: dark,
-    consumerBg: light,
-    producerBg: light,
-    tabColor: dark
+    labelColor: fontDark,
+    consumerBg: bgLight,
+    producerBg: bgLight,
+    tabColor: fontDark
   },
   [CONTENT.MAIN]: {
-    labelColor: light,
-    consumerBg: light,
-    producerBg: dark,
-    tabColor: dark
+    labelColor: fontLight,
+    consumerBg: bgLight,
+    producerBg: bgDark,
+    tabColor: fontDark
   },
   [CONTENT.PRODUCER]: {
-    labelColor: light,
-    consumerBg: dark,
-    producerBg: dark,
-    tabColor: light
+    labelColor: fontLight,
+    consumerBg: bgDark,
+    producerBg: bgDark,
+    tabColor: fontLight
   }
 }
