@@ -8,19 +8,3 @@
   text-align: center;
   width: 100%;
 }
-
-.provider {
-  align-items: center;
-  color: var(--labelColor);
-  display: flex;
-  justify-content: center;
-  width: 30%;
-}
-
-.customer {
-  align-items: center;
-  color: var(--tabColor);
-  display: flex;
-  justify-content: center;
-  width: 70%;
-}

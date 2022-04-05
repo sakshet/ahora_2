@@ -1,0 +1,7 @@
+.consumer {
+  align-items: center;
+  color: var(--tabColor);
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}

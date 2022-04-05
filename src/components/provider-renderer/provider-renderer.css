@@ -1,0 +1,7 @@
+.provider {
+  align-items: center;
+  color: var(--labelColor);
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
