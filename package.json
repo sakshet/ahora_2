@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/sakshet/ahora/issues"
   },
+  "type": "module",
   "files": [
     "dist",
     "src",
