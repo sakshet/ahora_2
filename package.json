@@ -28,8 +28,6 @@
   ],
   "homepage": "https://github.com/sakshet/ahora#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/node": "^7.16.8",
     "@types/enzyme": "^3.10.11",
     "@types/jest": "^27.4.1",
     "@types/lodash-es": "^4.17.6",
@@ -48,6 +46,8 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
     "ag-grid-community": "^27.1.0",
     "g": "^2.0.1",
     "history": "^5.3.0",
