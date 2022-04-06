@@ -1,18 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { ComingSoon } from './components';
-import { AhoraContainer, HomeContainer } from './containers';
-// import { AhoraContainer } from './containers/ahora-container';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { HomeContainer } from './containers';
 
-ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			{/* <AhoraContainer /> */}
-			{/* <ComingSoon /> */}
-			<HomeContainer />
-		</BrowserRouter>
-	</React.StrictMode>,
-	document.getElementById('root')
-)
+const root = ReactDOM.createRoot(document.getElementById("root")!);
+root.render(
+  <React.StrictMode>
+    <HomeContainer />
+  </React.StrictMode>
+);
