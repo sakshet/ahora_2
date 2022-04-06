@@ -1,15 +1,19 @@
+@import '../../shared/constants.css';
+
 .footer {
-  align-items: center;
-  background: var(--producerBg);
-  bottom: 0;
-  color: var(--labelColor);
   display: flex;
-  height: 10%;
-  font-family: Tahoma, sans-serif;
   justify-content: space-evenly;
-  position: absolute;
-  width: 100%;
-  -webkit-box-shadow: 0px -9px 6px -6px #717271;
-	-moz-box-shadow: 0px -9px 6px -6px #717271;
-  box-shadow: 0px -9px 6px -6px #717271;
+  align-items: center;
+  
+  background-color: var(--footerBackground);
+  border: solid;
+  border-width: var(--borderWidth);
+
+  bottom: 0;
+  font-family: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+  height: var(--footerHeight);
+  margin: var(--footerMargin);
+  text-align: center;
+  user-select: none;
+  width: calc(100% - var(--footerMargin) - var(--footerMargin));
 }

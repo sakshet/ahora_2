@@ -1,0 +1,55 @@
+@import "../../shared/constants.css";
+
+.home {
+  display: flex;
+  justify-content: center;
+  padding-top: calc(var(--headerHeight) + var(--headerMargin) + var(--borderWidth));
+  padding-bottom: calc(var(--footerHeight) + var(--footerMargin) + var(--footerWidth));
+  margin: calc(2 * var(--borderWidth));
+  margin-bottom: 0;
+  width: calc(100% - var(--borderWidth) - var(--borderWidth));
+}
+
+.left {
+  margin: calc(2*var(--borderWidth));
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.location {
+  background-color: var(--contentBackground);
+  border: solid;
+  border-width: var(--borderWidth);
+  font-size: var(--missionFontSize);
+  font-family: Palatino;
+  height: fit-content;
+  padding: var(--missionPadding);
+  text-align: justify;
+  user-select: none;
+  
+  /* To Remove */
+  text-align: center;
+  height: 45rem;
+}
+
+.mission {
+  background-color: var(--contentBackground);
+  border: solid;
+  border-width: var(--borderWidth);
+  font-size: var(--missionFontSize);
+  font-family: Palatino;
+  height: fit-content;
+  padding: var(--missionPadding);
+  text-align: justify;
+  user-select: none;
+  
+  /* To Remove */
+  text-align: center;
+  height: 45rem;
+}
+
+.right {
+  margin: calc(2*var(--borderWidth));
+  margin-bottom: 0;
+  width: 100%;
+}
