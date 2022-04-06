@@ -14,5 +14,5 @@ ReactDOM.render(
 			<HomeContainer />
 		</BrowserRouter>
 	</React.StrictMode>,
-	document.getElementById('app-root')
+	document.getElementById('root')
 )
