@@ -2,7 +2,7 @@
   "name": "ahora",
   "version": "1.0.0",
   "description": "Ahora",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "mock:start": "json-server --port 3001 --routes ./src/resources/json-mock-api/routes.json --watch src/resources/json-mock-api/db.json",
