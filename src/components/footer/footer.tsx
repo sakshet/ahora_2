@@ -7,8 +7,8 @@ export const Footer = () => {
       <div>About Us</div>
       <div>Terms & Conditions</div>
       <div>Privacy Policy</div>
-      <div>Reviews</div>
-      <div>Careers</div>
+      {/* <div>Reviews</div> */}
+      {/* <div>Careers</div> */}
       <div>Contact Us</div>
     </div>
   );

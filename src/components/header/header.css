@@ -1,0 +1,59 @@
+@import '../../shared/constants.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--headerBackground);
+  border: solid;
+  border-width: var(--borderWidth);
+
+  height: var(--headerHeight);
+  margin: var(--headerMargin);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  user-select: none;
+  width: calc(100% - var(--headerMargin) - var(--headerMargin));
+}
+
+.label {
+  border-right: solid;
+  border-width: var(--borderWidth);
+  font-family: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+  font-size: 2.5rem;
+  font-weight: bold;
+  height: 100%;
+  left: 0;
+  width: var(--headerLeftRightWidth);
+}
+
+.middle {
+  /* font-size: 4rem;
+  color: grey; */
+}
+
+.professional {
+  background: black;
+  border-radius: 30%;
+  color: var(--headerBackground);
+  padding: 0.4rem;
+}
+
+.right {
+  border-left: solid;
+  border-width: var(--borderWidth);  
+  height: 100%;
+  right: 0;
+  width: var(--headerLeftRightWidth);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tab {
+  font-size: 1rem;
+  font-family: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+}

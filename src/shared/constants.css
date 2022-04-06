@@ -1,7 +1,17 @@
 :root {
-  --labelColor: #FFFFFF;
-  --consumerBg: #FFFFFF;
+  --borderWidth: 0.12rem;
+  --missionFontSize: 2rem;
+  --missionPadding: 1rem;
 
-  --producerBg: #000000;
-  --tabColor: #000000;
+  --headerBackground: #F4F2E7;
+  --headerHeight: 3rem;
+  --headerMargin: 0.5rem;
+  --headerLeftRightWidth: 30%;
+
+  --footerBackground: #F4F2E7;
+  --footerHeight: 3rem;
+  --footerMargin: 0.5rem;
+
+  --contentBackground: #F4F2E7;
+  --contentMargin: 0.5rem;
 }
