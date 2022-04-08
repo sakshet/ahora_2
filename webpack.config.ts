@@ -1,14 +1,17 @@
 const prod = process.env.NODE_ENV === 'production';
 
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: prod ? 'production' : 'development',
-  entry: './index.tsx',
+  entry: './src/index.tsx',
   output: {
-    path: __dirname + '/dist/',
-    publicPath: '/'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    clean: true
   },
   devServer: {
     historyApiFallback: true,
