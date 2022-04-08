@@ -13,8 +13,9 @@
     "strict": true,
     "sourceMap": true,
     "target": "esnext",
+    "outDir": "./dist"
   },
-  "include": ["src", "index.d.ts", "index.tsx"],
+  "include": ["src", "index.d.ts", "./src/index.tsx"],
   "exclude": [
     "node_modules"
   ]
