@@ -16,22 +16,24 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: true
-            }
-          },
+          prod ? MiniCssExtractPlugin.loader : "style-loader",
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true
+              // minimize: true,
+              modules: true,
+              sourceMap: true
             }
           }
-        ]
+        ],
+        // include: /\.module\.css$/
       },
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader"],
+      //   exclude: /\.module\.css$/,
+      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -50,7 +52,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css"
+    })
   ],
 };
 
