@@ -18,7 +18,8 @@ module.exports = {
                     prod ? {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            esModule: true,
+                            // esModule: true,
+                            importLoaders: 2,
                             modules: {
                                 namedExport: true,
                                 localIdentName: "[name]--[hash:base64:5]",
@@ -33,7 +34,7 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            esModule: true,
+                            // esModule: true,
                             importLoaders: 2,
                             modules: {
                                 namedExport: true,
@@ -61,6 +62,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html'
         }),
-        prod && new MiniCssExtractPlugin({ filename: "bundle.min.css" })
+        prod && new MiniCssExtractPlugin({
+            filename: "foo.css",
+            chunkFilename: "[id].css"
+        })
     ].filter(Boolean),
 };
