@@ -13,18 +13,9 @@
     "strict": true,
     "sourceMap": true,
     "target": "esnext",
-<<<<<<< HEAD
     "outDir": "dist",
     "rootDir": "src"
   },
   "include": ["src/**/*"],
   "exclude": ["src/types/*ts", "node_modules", ".vscode"]
-=======
-    "outDir": "./dist"
-  },
-  "include": ["src", "index.d.ts", "./src/index.tsx"],
-  "exclude": [
-    "node_modules"
-  ]
->>>>>>> 31822e3 (Bundle)
 }
