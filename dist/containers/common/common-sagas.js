@@ -1,19 +1,24 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
-import { getReferenceData } from '../../services';
-import { ActionType } from "./common-actions";
-export function* getReferenceDataSaga(action) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.commonSagas = exports.getReferenceDataSaga = void 0;
+const effects_1 = require("redux-saga/effects");
+const services_1 = require("../../services");
+const common_actions_1 = require("./common-actions");
+function* getReferenceDataSaga(action) {
     try {
-        const referenceData = yield call(getReferenceData);
-        yield put({
+        const referenceData = yield (0, effects_1.call)(services_1.getReferenceData);
+        yield (0, effects_1.put)({
             referenceData,
-            type: ActionType.RECV_GET_REFERENCE_DATA
+            type: common_actions_1.ActionType.RECV_GET_REFERENCE_DATA
         });
     }
     catch (exception) {
-        yield put({ type: ActionType.XHR_GET_REFERENCE_DATA, error: exception });
+        yield (0, effects_1.put)({ type: common_actions_1.ActionType.XHR_GET_REFERENCE_DATA, error: exception });
     }
 }
-export function* commonSagas() {
-    yield takeEvery(ActionType.REQ_GET_REFERENCE_DATA, getReferenceDataSaga);
+exports.getReferenceDataSaga = getReferenceDataSaga;
+function* commonSagas() {
+    yield (0, effects_1.takeEvery)(common_actions_1.ActionType.REQ_GET_REFERENCE_DATA, getReferenceDataSaga);
 }
+exports.commonSagas = commonSagas;
 //# sourceMappingURL=common-sagas.js.map

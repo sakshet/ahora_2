@@ -1,5 +1,8 @@
-import { ActionType } from './common-actions';
-export const defaultState = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.commonReducer = exports.defaultState = void 0;
+const common_actions_1 = require("./common-actions");
+exports.defaultState = {
     error: undefined,
     isFetching: false,
     referenceData: {
@@ -18,14 +21,14 @@ export const defaultState = {
 };
 ;
 ;
-export const commonReducer = (state = defaultState, action) => {
+const commonReducer = (state = exports.defaultState, action) => {
     switch (action.type) {
-        case ActionType.REQ_GET_REFERENCE_DATA:
+        case common_actions_1.ActionType.REQ_GET_REFERENCE_DATA:
             return {
                 ...state,
                 isFetching: true
             };
-        case ActionType.RECV_GET_REFERENCE_DATA:
+        case common_actions_1.ActionType.RECV_GET_REFERENCE_DATA:
             return {
                 ...state,
                 isFetching: false,
@@ -33,7 +36,7 @@ export const commonReducer = (state = defaultState, action) => {
                 referenceDataFetched: true,
                 referenceDataSuccess: true
             };
-        case ActionType.XHR_GET_REFERENCE_DATA:
+        case common_actions_1.ActionType.XHR_GET_REFERENCE_DATA:
             return {
                 ...state,
                 error: action.error,
@@ -44,4 +47,5 @@ export const commonReducer = (state = defaultState, action) => {
     }
     return state;
 };
+exports.commonReducer = commonReducer;
 //# sourceMappingURL=common-reducers.js.map

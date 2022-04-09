@@ -1,15 +1,19 @@
-export var HttpMethod;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseJson = exports.fetchJson = exports.HttpMethod = void 0;
+var HttpMethod;
 (function (HttpMethod) {
     HttpMethod["Delete"] = "DELETE";
     HttpMethod["Get"] = "GET";
     HttpMethod["Post"] = "POST";
     HttpMethod["Put"] = "PUT";
-})(HttpMethod || (HttpMethod = {}));
-export async function fetchJson(url, method = HttpMethod.Get) {
+})(HttpMethod = exports.HttpMethod || (exports.HttpMethod = {}));
+async function fetchJson(url, method = HttpMethod.Get) {
     const response = await fetch(url);
     checkStatus(response);
     return parseJson(response);
 }
+exports.fetchJson = fetchJson;
 function checkStatus(response) {
     if (response.ok || response.status === 400) {
         return response;
@@ -18,7 +22,7 @@ function checkStatus(response) {
         throw { status: response.status };
     }
 }
-export async function parseJson(response) {
+async function parseJson(response) {
     if (response.status === 204) {
         return;
     }
@@ -36,4 +40,5 @@ export async function parseJson(response) {
         return response.json();
     }
 }
+exports.parseJson = parseJson;
 //# sourceMappingURL=fetch-utils.js.map
