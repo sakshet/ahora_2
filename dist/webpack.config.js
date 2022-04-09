@@ -19,7 +19,8 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            esModule: true
+                            esModule: true,
+                            modules: true
                         }
                     },
                     {
