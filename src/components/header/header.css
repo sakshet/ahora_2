@@ -21,6 +21,7 @@
 .label {
   border-right: solid;
   border-width: var(--borderWidth);
+  cursor: pointer;
   font-family: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
   font-size: 2.5rem;
   font-weight: bold;
@@ -33,6 +34,7 @@
   background: black;
   border-radius: 30%;
   color: var(--headerBackground);
+  cursor: pointer;
   padding: 0.4rem;
 }
 
@@ -49,6 +51,7 @@
 }
 
 .tab {
+  cursor: pointer;
   font-size: 1rem;
   font-family: 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
 }

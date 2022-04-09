@@ -5,9 +5,9 @@ const React = require("react");
 const styles = require("./footer.css");
 const Footer = () => {
     return (React.createElement("div", { className: styles.footer },
-        React.createElement("div", null, "About Us"),
-        React.createElement("div", null, "Terms & Conditions"),
-        React.createElement("div", null, "Privacy Policy"),
-        React.createElement("div", null, "Contact Us")));
+        React.createElement("div", { className: styles.tab }, "About Us"),
+        React.createElement("div", { className: styles.tab }, "Terms & Conditions"),
+        React.createElement("div", { className: styles.tab }, "Privacy Policy"),
+        React.createElement("div", { className: styles.tab }, "Contact Us")));
 };
 exports.Footer = Footer;

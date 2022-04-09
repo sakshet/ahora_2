@@ -19,10 +19,10 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             esModule: true,
-                            // importLoaders: 2,
+                            exclude: path.resolve(__dirname, "node_modules"),
                             modules: {
                                 namedExport: true,
-                                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                                localIdentName: "[local]--[hash:base64:5]"
                             },
                             publicPath: '../'
                         },
@@ -36,10 +36,9 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             esModule: true,
-                            // importLoaders: 2,
                             modules: {
                                 namedExport: true,
-                                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                                localIdentName: "[local]--[hash:base64:5]"
                             },
                         },
                     }
