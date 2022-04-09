@@ -16,7 +16,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          {loader: prod ? {
+          prod ? {
             loader: MiniCssExtractPlugin.loader,
             options: {
               esModule: true,
@@ -25,7 +25,12 @@ module.exports = {
                 localIdentName: "[name]--[hash:base64:5]",
               },
             },
-          } : "style-loader",},
+          } : {
+            loader: "style-loader",
+            options: {
+              esModule: true,
+            },
+          },
           {
             loader: "css-loader",
             options: {
@@ -35,8 +40,8 @@ module.exports = {
                 localIdentName: "[name]--[hash:base64:5]",
               },
             },
-          },
-        ],
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
