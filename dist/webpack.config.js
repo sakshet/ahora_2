@@ -34,6 +34,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             esModule: true,
+                            importLoaders: 2,
                             modules: {
                                 namedExport: true,
                                 localIdentName: "[name]--[hash:base64:5]",

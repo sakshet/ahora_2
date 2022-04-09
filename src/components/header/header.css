@@ -29,11 +29,6 @@
   width: var(--headerLeftRightWidth);
 }
 
-.middle {
-  /* font-size: 4rem;
-  color: grey; */
-}
-
 .professional {
   background: black;
   border-radius: 30%;
