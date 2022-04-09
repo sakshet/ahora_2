@@ -27,6 +27,7 @@
     "*.js",
     ""
   ],
+  "sideEffects": ["*.css", "*.scss", "*.sass"],
   "homepage": "https://github.com/sakshet/ahora#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",

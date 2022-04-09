@@ -60,6 +60,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html'
         }),
-        new MiniCssExtractPlugin()
-    ],
+        prod && new MiniCssExtractPlugin({ filename: "bundle.min.css" })
+    ].filter(Boolean),
 };
