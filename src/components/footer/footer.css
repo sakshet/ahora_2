@@ -17,3 +17,7 @@
   user-select: none;
   width: calc(100% - var(--footerMargin) - var(--footerMargin));
 }
+
+.tab {
+  cursor: pointer;
+}

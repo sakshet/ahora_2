@@ -4,12 +4,10 @@ import * as styles from './footer.css';
 export const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div>About Us</div>
-      <div>Terms & Conditions</div>
-      <div>Privacy Policy</div>
-      {/* <div>Reviews</div> */}
-      {/* <div>Careers</div> */}
-      <div>Contact Us</div>
+      <div className={styles.tab}>About Us</div>
+      <div className={styles.tab}>Terms & Conditions</div>
+      <div className={styles.tab}>Privacy Policy</div>
+      <div className={styles.tab}>Contact Us</div>
     </div>
   );
 }
