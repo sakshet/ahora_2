@@ -13,31 +13,36 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: [
-          prod ? MiniCssExtractPlugin.loader : "style-loader",
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              // minimize: true,
-              modules: true,
-              sourceMap: true
-            }
-          }
-        ],
-        // include: /\.module\.css$/
-      },
       // {
       //   test: /\.css$/,
-      //   use: ["style-loader", "css-loader"],
-      //   exclude: /\.module\.css$/,
+      //   use: [
+      //     prod ? MiniCssExtractPlugin.loader : "style-loader",
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         modules: {
+      //           mode: "local",
+      //           auto: true,
+      //           exportGlobals: true,
+      //           localIdentName: "[path][name]__[local]--[hash:base64:5]",
+      //           localIdentContext: path.resolve(__dirname, "src"),
+      //           localIdentHashSalt: "my-custom-hash",
+      //           namedExport: true,
+      //           exportLocalsConvention: "camelCase",
+      //           exportOnlyLocals: false, 
+      //         }
+      //       }
+      //     },
+      //   ],
       // },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-      }
+      },
     ],
   },
   resolve: {
@@ -53,68 +58,7 @@ module.exports = {
       template: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css"
+      filename: "[name].css"
     })
   ],
 };
-
-// const prod = process.env.NODE_ENV === 'production';
-
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const path = require('path');
-
-// module.exports = {
-//   mode: prod ? 'production' : 'development',
-//   entry: './src/index.tsx',
-//   output: {
-//     filename: 'bundle.js',
-//     path: path.resolve(__dirname, 'dist'),
-//     publicPath: '/'
-//   },
-//   devServer: {
-//     historyApiFallback: true,
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.(ts|tsx)$/,
-//         exclude: /node_modules/,
-//         resolve: {
-//           extensions: ['.ts', '.tsx', '.js', '.json'],
-//         },
-//         use: 'ts-loader',
-//       },
-//       {
-//         test: /\.css$/,
-//         use: [
-//           'style-loader',
-//           {
-//             loader: MiniCssExtractPlugin.loader,
-//             options: {
-//               esModule: false
-//             }
-//           },
-//           {
-//             loader: 'css-loader',
-//             options: {
-//               importLoaders: 1,
-//               modules: true
-//             }
-//           }
-//         ]
-//       },
-//       {
-//         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-//         type: 'asset/resource',
-//       },
-//     ]
-//   },
-//   devtool: prod ? undefined : 'source-map',
-//   plugins: [
-//     new HtmlWebpackPlugin({
-//       template: 'index.html'
-//     }),
-//     new MiniCssExtractPlugin()
-//   ],
-// };
