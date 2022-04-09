@@ -25,6 +25,7 @@ module.exports = {
                 namedExport: true,
                 localIdentName: "[path][name]__[local]--[hash:base64:5]",
               },
+              publicPath: '../'
             },
           } : {
             loader: "style-loader",
@@ -43,7 +44,8 @@ module.exports = {
               },
             },
           }
-        ]
+        ],
+        sideEffects: true,
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -64,7 +66,7 @@ module.exports = {
       template: 'index.html'
     }),
     prod && new MiniCssExtractPlugin({
-      filename: "foo.css",
+      filename: "[name].css",
       chunkFilename: "[id].css"
     })
   ].filter(Boolean),
