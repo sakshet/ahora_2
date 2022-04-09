@@ -18,11 +18,11 @@ module.exports = {
                     prod ? {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            // esModule: true,
-                            importLoaders: 2,
+                            esModule: true,
+                            // importLoaders: 2,
                             modules: {
                                 namedExport: true,
-                                localIdentName: "[name]--[hash:base64:5]",
+                                localIdentName: "[path][name]__[local]--[hash:base64:5]",
                             },
                         },
                     } : {
@@ -34,11 +34,11 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            // esModule: true,
-                            importLoaders: 2,
+                            esModule: true,
+                            // importLoaders: 2,
                             modules: {
                                 namedExport: true,
-                                localIdentName: "[name]--[hash:base64:5]",
+                                localIdentName: "[path][name]__[local]--[hash:base64:5]",
                             },
                         },
                     }
