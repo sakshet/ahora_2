@@ -1,21 +1,34 @@
+// {
+//   "compilerOptions": {
+//     "esModuleInterop": true,
+//     "jsx": "react",
+//     "module": "commonjs",
+//     "moduleResolution": "node",
+//     "noImplicitAny": false,
+//     "lib": [
+//       "dom",
+//       "esnext"
+//     ],
+//     "plugins": [{ "name": "typescript-plugin-css-modules" }],
+//     "strict": true,
+//     "sourceMap": true,
+//     "target": "esnext",
+//     "outDir": "dist",
+//     "rootDir": "src"
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["src/types/*ts", "node_modules", ".vscode"]
+// }
+
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "outDir": "./dist/",
     "noImplicitAny": false,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "strict": true,
-    "sourceMap": true,
+    "module": "commonjs",
     "target": "esnext",
-    "outDir": "dist",
-    "rootDir": "src"
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
-  "exclude": ["src/types/*ts", "node_modules", ".vscode"]
+  "exclude": ["node_modules", ".vscode"]
 }

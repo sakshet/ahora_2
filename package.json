@@ -5,6 +5,7 @@
   "main": "./src/index.tsx",
   "scripts": {
     "build": "tsc",
+    "magic": "webpack",
     "mock:start": "json-server --port 3001 --routes ./src/resources/json-mock-api/routes.json --watch src/resources/json-mock-api/db.json",
     "start": "webpack serve --port 3000",
     "test": "npm run test:run",
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/sakshet/ahora/issues"
   },
-  "type": "module",
   "files": [
     "dist",
     "src",
