@@ -14,38 +14,29 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [
+                    { loader: prod ? {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                esModule: true,
+                                modules: {
+                                    namedExport: true,
+                                    localIdentName: "[name]--[hash:base64:5]",
+                                },
+                            },
+                        } : "style-loader", },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            esModule: true,
+                            modules: {
+                                namedExport: true,
+                                localIdentName: "[name]--[hash:base64:5]",
+                            },
+                        },
+                    },
+                ],
             },
-            // {
-            //   test: /\.css$/,
-            //   use: ['style-loader', 'css-loader', MiniCssExtractPlugin.loader]
-            // },
-            // {
-            //   test: /\.css$/,
-            //   use: [
-            //     prod ? MiniCssExtractPlugin.loader : "style-loader",
-            //     {
-            //       loader: 'css-loader',
-            //       options: {
-            //         modules: {
-            //           mode: "local",
-            //           auto: true,
-            //           exportGlobals: true,
-            //           localIdentName: "[path][name]__[local]--[hash:base64:5]",
-            //           localIdentContext: path.resolve(__dirname, "src"),
-            //           localIdentHashSalt: "my-custom-hash",
-            //           namedExport: true,
-            //           exportLocalsConvention: "camelCase",
-            //           exportOnlyLocals: false, 
-            //         }
-            //       }
-            //     },
-            //   ],
-            // },
-            // {
-            //   test: /\.css$/,
-            //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            // },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
@@ -64,8 +55,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html'
         }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css"
-        }),
+        new MiniCssExtractPlugin()
     ],
 };

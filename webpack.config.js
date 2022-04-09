@@ -16,7 +16,16 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          {loader: prod ? MiniCssExtractPlugin.loader : "style-loader",},
+          {loader: prod ? {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+              modules: {
+                namedExport: true,
+                localIdentName: "[name]--[hash:base64:5]",
+              },
+            },
+          } : "style-loader",},
           {
             loader: "css-loader",
             options: {
